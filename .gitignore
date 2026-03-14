@@ -1,0 +1,143 @@
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Backend Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+pythonenv*
+*.egg-info/
+dist/
+build/
+*.egg
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+*.pyc
+
+# Frontend Next.js
+.next/
+out/
+build/
+dist/
+.next/static/
+.next/cache/
+.next/trace
+.next/analyze
+.next/types
+
+# ML Models (tetapi file model tetap di-track, hanya cache yang diignore)
+ml/__pycache__/
+ml/.ipynb_checkpoints/
+ml/*.joblib
+ml/*.pkl
+!ml/model.pkl
+!ml/label_encoder.pkl
+!ml/scaler.pkl
+ml/*.h5
+ml/*.keras
+
+# Data files (tetap track CSV, ignore yang lain)
+data/*.csv
+!data/sales_data.csv
+data/*.db
+data/*.sqlite
+data/*.sqlite3
+data/*.log
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Testing
+coverage/
+.nyc_output/
+reports/
+test-results/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+.cache/
+
+# GitHub specific
+*.lfs
+*.gitlfs
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# Frontend build artifacts
+frontend/.next/
+frontend/out/
+frontend/build/
+frontend/dist/
+frontend/.vercel
+
+# Backend runtime
+backend/.env
+backend/.coverage
+backend/htmlcov/
+backend/.pytest_cache/
+
+# ML runtime
+ml/__pycache__/
+ml/.ipynb_checkpoints/
+ml/wandb/
+ml/lightning_logs/
+ml/mlruns/
+
+# Data backup
+data/backup/
+data/archive/
+data/*.backup
+data/*.old
+
+# System files
+.vscode/
+.idea/
+*.iml
+*.class
+*.jar
+*.war
+*.ear

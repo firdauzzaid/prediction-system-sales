@@ -1,1 +1,10 @@
-node_modules
+# Next.js specific
+.next/
+out/
+build/
+dist/
+.cache/
+node_modules/
+.env.local
+.env.production
+.env.development
