@@ -1,3 +1,5 @@
+import os
+
 from pydantic_settings import BaseSettings
 from typing import Optional
 from pathlib import Path
@@ -17,9 +19,12 @@ class Settings(BaseSettings):
     DUMMY_PASSWORD: str = "password"
     
     # File paths
-    ROOT_DIR: Path = Path(__file__).parent.parent.parent.parent
-    CSV_FILE_PATH: str = str(ROOT_DIR / "data" / "sales_data.csv")
-    MODEL_FILE_PATH: str = str(ROOT_DIR / "ml" / "model.pkl")
+    # ROOT_DIR: Path = Path(__file__).parent.parent.parent.parent
+    # CSV_FILE_PATH: str = str(ROOT_DIR / "data" / "sales_data.csv")
+    # MODEL_FILE_PATH: str = str(ROOT_DIR / "ml" / "model.pkl")
+
+    CSV_FILE_PATH: str = os.getenv("CSV_FILE_PATH", "data/sales_data.csv")
+    MODEL_FILE_PATH: str = os.getenv("MODEL_FILE_PATH", "ml/model.pkl")
     
     class Config:
         case_sensitive = True
