@@ -1,0 +1,5372 @@
+[00:00:04.434] Server  LOG     ✓ Ready in 3.2s
+[00:00:28.678] Server  LOG     ○ Compiling / ...
+[00:05:43.023] Server  WARN    ⚠ Fast Refresh had to perform a full reload when ./app/lib/auth.ts changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:05:43.029] Server  LOG     ✓ Compiled in 292ms
+[00:06:22.473] Server  WARN    ⚠ Fast Refresh had to perform a full reload when ./app/hooks/useAuth.ts changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:06:22.943] Server  LOG     ✓ Compiled in 249ms
+[00:06:59.629] Server  LOG     ✓ Compiled in 140ms
+[00:08:41.670] Server  ERROR   Login error: TypeError: fetch failed
+[00:08:41.793] Browser ERROR   Login error: {}
+[00:29:26.075] Server  ERROR   Login error: TypeError: fetch failed
+[00:29:26.211] Browser ERROR   Login error: {}
+[00:36:48.343] Browser ERROR   Login error: {}
+[00:36:51.258] Browser ERROR   Login error: {}
+[00:37:01.710] Server  LOG     ○ Compiling /dashboard ...
+[00:40:24.478] Browser ERROR   Prediction failed: {"code":"ERR_BAD_RESPONSE","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"baseURL":"http://localhost:8000/api","data":"{\"jumlah_penjualan\":100,\"harga\":50001,\"diskon\":10}","env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTc3MzQ2NDYzNX0.C6u7uowBP51jd7ExgD2CxGf51IruY9LTLgjeCe0NvFA","Content-Type":"application/json"},"maxBodyLength":-1,"maxContentLength":-1,"method":"post","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"/predict","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Request failed with status code 500","name":"AxiosError","stack":"AxiosError: Request failed with status code 500\n    at settle (http://localhost:3000/_next/static/chunks/node_modules_2d181df9._.js:3558:16)\n    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_2d181df9._.js:4074:174)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_2d181df9._.js:4880:49)\n    at async predict (http://localhost:3000/_next/static/chunks/app_42c33803._.js:74:30)\n    at async handlePredict (http://localhost:3000/_next/static/chunks/app_42c33803._.js:311:13)","status":500}
+[00:40:46.070] Browser ERROR   Login error: {}
+[00:41:04.869] Browser ERROR   unhandledRejection: AxiosError: Request failed with status code 500
+[01:31:27.210] Server  LOG     ✓ Compiled in 1866ms
+[01:31:31.383] Browser ERROR   Login error: {}
+[01:35:07.226] Server  LOG     ✓ Compiled in 314ms
+[01:36:15.854] Browser ERROR   Login error: {}
+[01:39:29.463] Server  LOG     ✓ Compiled in 845ms
+[01:39:30.657] Browser ERROR   ./app/components/layout/Navbar.tsx:14:3
+Parsing ecmascript source code failed
+  12 |
+  13 |   // Update time every minute
+> 14 |   import { useEffect } from "react";
+     |   ^^^^^^
+  15 |   useEffect(() => {
+  16 |     const timer = setInterval(() => setCurrentTime(new Date()), 60000);
+  17 |     return () => clearInterval(timer);
+
+'import', and 'export' cannot be used outside of module code
+
+Import traces:
+  Client Component Browser:
+    ./app/components/layout/Navbar.tsx [Client Component Browser]
+    ./app/(dashboard)/layout.tsx [Client Component Browser]
+    ./app/(dashboard)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/layout/Navbar.tsx [Client Component SSR]
+    ./app/(dashboard)/layout.tsx [Client Component SSR]
+    ./app/(dashboard)/layout.tsx [Server Component]
+[01:39:52.707] Server  LOG     ✓ Compiled in 560ms
+[01:42:40.504] Server  LOG     ✓ Compiled in 404ms
+[01:43:21.285] Server  LOG     ✓ Compiled in 446ms
+[01:45:47.654] Server  LOG     ✓ Compiled in 470ms
+[01:46:42.258] Server  LOG     ✓ Compiled in 190ms
+[01:46:59.651] Server  LOG     ✓ Compiled in 953ms
+[01:50:47.421] Server  LOG     ✓ Compiled in 453ms
+[01:51:38.987] Server  LOG     ✓ Compiled in 206ms
+[01:52:28.907] Server  LOG     ✓ Compiled in 202ms
+[01:56:47.554] Server  LOG     ✓ Compiled in 304ms
+[01:58:07.485] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, Transition } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:58:07.559] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, Transition } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:58:07.585] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, Transition } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:58:07.624] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, Transition } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:58:07.650] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, Transition } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:58:07.687] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, Transition } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:58:07.744] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, Transition } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:58:07.781] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, Transition } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:58:07.824] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, Transition } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:58:07.867] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, Transition } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:58:07.891] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, Transition } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:58:07.952] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, Transition } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:58:08.205] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, Transition } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:58:08.226] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, Transition } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:58:08.281] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, Transition } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:58:08.298] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, Transition } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:58:08.324] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, Transition } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:58:08.340] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, Transition } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:58:08.391] Server  LOG     ✓ Compiled in 2.7s
+[01:58:08.581] Browser ERROR   ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, Transition } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[01:58:20.784] Server  LOG     ✓ Finished writing to filesystem cache in 10.9s
+[02:04:16.060] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:16.113] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:16.155] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:16.265] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:16.366] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:16.461] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:16.478] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:16.496] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:16.517] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:16.538] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:16.623] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:16.645] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:16.668] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:16.686] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:16.700] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:16.741] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:16.771] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:16.792] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:16.812] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:16.838] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:16.852] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:16.867] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:16.892] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:16.918] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:16.945] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:16.972] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:17.002] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:17.027] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:17.045] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:17.078] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:17.107] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:17.126] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:17.142] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:17.170] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:17.205] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:17.227] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:17.239] Server  LOG     ✓ Compiled in 1403ms
+[02:04:18.571] Browser ERROR   ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[02:04:52.801] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:52.856] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:52.884] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:52.928] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:52.944] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:52.959] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:52.979] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:52.993] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:53.013] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:53.026] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:53.056] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:53.143] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:53.189] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:53.222] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:53.241] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:53.260] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:53.284] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:53.305] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:53.337] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:53.382] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:53.403] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:53.424] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:53.444] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:53.462] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:53.488] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:53.512] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:53.543] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:53.562] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:53.583] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:53.613] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:53.646] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:53.697] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:53.750] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:53.789] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:53.812] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:53.828] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:04:53.857] Server  LOG     ✓ Compiled in 429ms
+[02:04:55.588] Browser ERROR   ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[02:06:59.924] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+   2 |
+   3 | import { Fragment } from "react";
+>  4 | import {
+     | ^^^^^^^^
+>  5 |   Dialog,
+     | ^^^^^^^^^
+>  6 |   DialogPanel,
+     | ^^^^^^^^^
+>  7 |   DialogTitle,
+     | ^^^^^^^^^
+>  8 |   Transition,
+     | ^^^^^^^^^
+>  9 |   TransitionChild,
+     | ^^^^^^^^^
+> 10 | } from "@headlessui/react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import {
+  12 |   X,
+  13 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:06:59.946] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+   2 |
+   3 | import { Fragment } from "react";
+>  4 | import {
+     | ^^^^^^^^
+>  5 |   Dialog,
+     | ^^^^^^^^^
+>  6 |   DialogPanel,
+     | ^^^^^^^^^
+>  7 |   DialogTitle,
+     | ^^^^^^^^^
+>  8 |   Transition,
+     | ^^^^^^^^^
+>  9 |   TransitionChild,
+     | ^^^^^^^^^
+> 10 | } from "@headlessui/react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import {
+  12 |   X,
+  13 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:06:59.967] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+   2 |
+   3 | import { Fragment } from "react";
+>  4 | import {
+     | ^^^^^^^^
+>  5 |   Dialog,
+     | ^^^^^^^^^
+>  6 |   DialogPanel,
+     | ^^^^^^^^^
+>  7 |   DialogTitle,
+     | ^^^^^^^^^
+>  8 |   Transition,
+     | ^^^^^^^^^
+>  9 |   TransitionChild,
+     | ^^^^^^^^^
+> 10 | } from "@headlessui/react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import {
+  12 |   X,
+  13 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:06:59.979] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+   2 |
+   3 | import { Fragment } from "react";
+>  4 | import {
+     | ^^^^^^^^
+>  5 |   Dialog,
+     | ^^^^^^^^^
+>  6 |   DialogPanel,
+     | ^^^^^^^^^
+>  7 |   DialogTitle,
+     | ^^^^^^^^^
+>  8 |   Transition,
+     | ^^^^^^^^^
+>  9 |   TransitionChild,
+     | ^^^^^^^^^
+> 10 | } from "@headlessui/react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import {
+  12 |   X,
+  13 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:06:59.993] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+   2 |
+   3 | import { Fragment } from "react";
+>  4 | import {
+     | ^^^^^^^^
+>  5 |   Dialog,
+     | ^^^^^^^^^
+>  6 |   DialogPanel,
+     | ^^^^^^^^^
+>  7 |   DialogTitle,
+     | ^^^^^^^^^
+>  8 |   Transition,
+     | ^^^^^^^^^
+>  9 |   TransitionChild,
+     | ^^^^^^^^^
+> 10 | } from "@headlessui/react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import {
+  12 |   X,
+  13 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:07:00.010] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+   2 |
+   3 | import { Fragment } from "react";
+>  4 | import {
+     | ^^^^^^^^
+>  5 |   Dialog,
+     | ^^^^^^^^^
+>  6 |   DialogPanel,
+     | ^^^^^^^^^
+>  7 |   DialogTitle,
+     | ^^^^^^^^^
+>  8 |   Transition,
+     | ^^^^^^^^^
+>  9 |   TransitionChild,
+     | ^^^^^^^^^
+> 10 | } from "@headlessui/react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import {
+  12 |   X,
+  13 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:07:00.026] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+   2 |
+   3 | import { Fragment } from "react";
+>  4 | import {
+     | ^^^^^^^^
+>  5 |   Dialog,
+     | ^^^^^^^^^
+>  6 |   DialogPanel,
+     | ^^^^^^^^^
+>  7 |   DialogTitle,
+     | ^^^^^^^^^
+>  8 |   Transition,
+     | ^^^^^^^^^
+>  9 |   TransitionChild,
+     | ^^^^^^^^^
+> 10 | } from "@headlessui/react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import {
+  12 |   X,
+  13 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:07:00.069] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+   2 |
+   3 | import { Fragment } from "react";
+>  4 | import {
+     | ^^^^^^^^
+>  5 |   Dialog,
+     | ^^^^^^^^^
+>  6 |   DialogPanel,
+     | ^^^^^^^^^
+>  7 |   DialogTitle,
+     | ^^^^^^^^^
+>  8 |   Transition,
+     | ^^^^^^^^^
+>  9 |   TransitionChild,
+     | ^^^^^^^^^
+> 10 | } from "@headlessui/react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import {
+  12 |   X,
+  13 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:07:00.095] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+   2 |
+   3 | import { Fragment } from "react";
+>  4 | import {
+     | ^^^^^^^^
+>  5 |   Dialog,
+     | ^^^^^^^^^
+>  6 |   DialogPanel,
+     | ^^^^^^^^^
+>  7 |   DialogTitle,
+     | ^^^^^^^^^
+>  8 |   Transition,
+     | ^^^^^^^^^
+>  9 |   TransitionChild,
+     | ^^^^^^^^^
+> 10 | } from "@headlessui/react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import {
+  12 |   X,
+  13 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:07:00.117] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+   2 |
+   3 | import { Fragment } from "react";
+>  4 | import {
+     | ^^^^^^^^
+>  5 |   Dialog,
+     | ^^^^^^^^^
+>  6 |   DialogPanel,
+     | ^^^^^^^^^
+>  7 |   DialogTitle,
+     | ^^^^^^^^^
+>  8 |   Transition,
+     | ^^^^^^^^^
+>  9 |   TransitionChild,
+     | ^^^^^^^^^
+> 10 | } from "@headlessui/react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import {
+  12 |   X,
+  13 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:07:00.134] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+   2 |
+   3 | import { Fragment } from "react";
+>  4 | import {
+     | ^^^^^^^^
+>  5 |   Dialog,
+     | ^^^^^^^^^
+>  6 |   DialogPanel,
+     | ^^^^^^^^^
+>  7 |   DialogTitle,
+     | ^^^^^^^^^
+>  8 |   Transition,
+     | ^^^^^^^^^
+>  9 |   TransitionChild,
+     | ^^^^^^^^^
+> 10 | } from "@headlessui/react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import {
+  12 |   X,
+  13 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:07:00.153] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+   2 |
+   3 | import { Fragment } from "react";
+>  4 | import {
+     | ^^^^^^^^
+>  5 |   Dialog,
+     | ^^^^^^^^^
+>  6 |   DialogPanel,
+     | ^^^^^^^^^
+>  7 |   DialogTitle,
+     | ^^^^^^^^^
+>  8 |   Transition,
+     | ^^^^^^^^^
+>  9 |   TransitionChild,
+     | ^^^^^^^^^
+> 10 | } from "@headlessui/react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import {
+  12 |   X,
+  13 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:07:00.172] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+   2 |
+   3 | import { Fragment } from "react";
+>  4 | import {
+     | ^^^^^^^^
+>  5 |   Dialog,
+     | ^^^^^^^^^
+>  6 |   DialogPanel,
+     | ^^^^^^^^^
+>  7 |   DialogTitle,
+     | ^^^^^^^^^
+>  8 |   Transition,
+     | ^^^^^^^^^
+>  9 |   TransitionChild,
+     | ^^^^^^^^^
+> 10 | } from "@headlessui/react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import {
+  12 |   X,
+  13 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:07:00.189] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+   2 |
+   3 | import { Fragment } from "react";
+>  4 | import {
+     | ^^^^^^^^
+>  5 |   Dialog,
+     | ^^^^^^^^^
+>  6 |   DialogPanel,
+     | ^^^^^^^^^
+>  7 |   DialogTitle,
+     | ^^^^^^^^^
+>  8 |   Transition,
+     | ^^^^^^^^^
+>  9 |   TransitionChild,
+     | ^^^^^^^^^
+> 10 | } from "@headlessui/react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import {
+  12 |   X,
+  13 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:07:00.211] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+   2 |
+   3 | import { Fragment } from "react";
+>  4 | import {
+     | ^^^^^^^^
+>  5 |   Dialog,
+     | ^^^^^^^^^
+>  6 |   DialogPanel,
+     | ^^^^^^^^^
+>  7 |   DialogTitle,
+     | ^^^^^^^^^
+>  8 |   Transition,
+     | ^^^^^^^^^
+>  9 |   TransitionChild,
+     | ^^^^^^^^^
+> 10 | } from "@headlessui/react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import {
+  12 |   X,
+  13 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:07:00.227] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+   2 |
+   3 | import { Fragment } from "react";
+>  4 | import {
+     | ^^^^^^^^
+>  5 |   Dialog,
+     | ^^^^^^^^^
+>  6 |   DialogPanel,
+     | ^^^^^^^^^
+>  7 |   DialogTitle,
+     | ^^^^^^^^^
+>  8 |   Transition,
+     | ^^^^^^^^^
+>  9 |   TransitionChild,
+     | ^^^^^^^^^
+> 10 | } from "@headlessui/react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import {
+  12 |   X,
+  13 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:07:00.250] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+   2 |
+   3 | import { Fragment } from "react";
+>  4 | import {
+     | ^^^^^^^^
+>  5 |   Dialog,
+     | ^^^^^^^^^
+>  6 |   DialogPanel,
+     | ^^^^^^^^^
+>  7 |   DialogTitle,
+     | ^^^^^^^^^
+>  8 |   Transition,
+     | ^^^^^^^^^
+>  9 |   TransitionChild,
+     | ^^^^^^^^^
+> 10 | } from "@headlessui/react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import {
+  12 |   X,
+  13 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:07:00.267] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+   2 |
+   3 | import { Fragment } from "react";
+>  4 | import {
+     | ^^^^^^^^
+>  5 |   Dialog,
+     | ^^^^^^^^^
+>  6 |   DialogPanel,
+     | ^^^^^^^^^
+>  7 |   DialogTitle,
+     | ^^^^^^^^^
+>  8 |   Transition,
+     | ^^^^^^^^^
+>  9 |   TransitionChild,
+     | ^^^^^^^^^
+> 10 | } from "@headlessui/react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import {
+  12 |   X,
+  13 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:07:00.286] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+   2 |
+   3 | import { Fragment } from "react";
+>  4 | import {
+     | ^^^^^^^^
+>  5 |   Dialog,
+     | ^^^^^^^^^
+>  6 |   DialogPanel,
+     | ^^^^^^^^^
+>  7 |   DialogTitle,
+     | ^^^^^^^^^
+>  8 |   Transition,
+     | ^^^^^^^^^
+>  9 |   TransitionChild,
+     | ^^^^^^^^^
+> 10 | } from "@headlessui/react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import {
+  12 |   X,
+  13 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:07:00.300] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+   2 |
+   3 | import { Fragment } from "react";
+>  4 | import {
+     | ^^^^^^^^
+>  5 |   Dialog,
+     | ^^^^^^^^^
+>  6 |   DialogPanel,
+     | ^^^^^^^^^
+>  7 |   DialogTitle,
+     | ^^^^^^^^^
+>  8 |   Transition,
+     | ^^^^^^^^^
+>  9 |   TransitionChild,
+     | ^^^^^^^^^
+> 10 | } from "@headlessui/react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import {
+  12 |   X,
+  13 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:07:00.319] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+   2 |
+   3 | import { Fragment } from "react";
+>  4 | import {
+     | ^^^^^^^^
+>  5 |   Dialog,
+     | ^^^^^^^^^
+>  6 |   DialogPanel,
+     | ^^^^^^^^^
+>  7 |   DialogTitle,
+     | ^^^^^^^^^
+>  8 |   Transition,
+     | ^^^^^^^^^
+>  9 |   TransitionChild,
+     | ^^^^^^^^^
+> 10 | } from "@headlessui/react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import {
+  12 |   X,
+  13 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:07:00.349] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+   2 |
+   3 | import { Fragment } from "react";
+>  4 | import {
+     | ^^^^^^^^
+>  5 |   Dialog,
+     | ^^^^^^^^^
+>  6 |   DialogPanel,
+     | ^^^^^^^^^
+>  7 |   DialogTitle,
+     | ^^^^^^^^^
+>  8 |   Transition,
+     | ^^^^^^^^^
+>  9 |   TransitionChild,
+     | ^^^^^^^^^
+> 10 | } from "@headlessui/react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import {
+  12 |   X,
+  13 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:07:00.370] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+   2 |
+   3 | import { Fragment } from "react";
+>  4 | import {
+     | ^^^^^^^^
+>  5 |   Dialog,
+     | ^^^^^^^^^
+>  6 |   DialogPanel,
+     | ^^^^^^^^^
+>  7 |   DialogTitle,
+     | ^^^^^^^^^
+>  8 |   Transition,
+     | ^^^^^^^^^
+>  9 |   TransitionChild,
+     | ^^^^^^^^^
+> 10 | } from "@headlessui/react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import {
+  12 |   X,
+  13 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:07:00.389] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+   2 |
+   3 | import { Fragment } from "react";
+>  4 | import {
+     | ^^^^^^^^
+>  5 |   Dialog,
+     | ^^^^^^^^^
+>  6 |   DialogPanel,
+     | ^^^^^^^^^
+>  7 |   DialogTitle,
+     | ^^^^^^^^^
+>  8 |   Transition,
+     | ^^^^^^^^^
+>  9 |   TransitionChild,
+     | ^^^^^^^^^
+> 10 | } from "@headlessui/react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import {
+  12 |   X,
+  13 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:07:00.409] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+   2 |
+   3 | import { Fragment } from "react";
+>  4 | import {
+     | ^^^^^^^^
+>  5 |   Dialog,
+     | ^^^^^^^^^
+>  6 |   DialogPanel,
+     | ^^^^^^^^^
+>  7 |   DialogTitle,
+     | ^^^^^^^^^
+>  8 |   Transition,
+     | ^^^^^^^^^
+>  9 |   TransitionChild,
+     | ^^^^^^^^^
+> 10 | } from "@headlessui/react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import {
+  12 |   X,
+  13 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:07:00.435] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+   2 |
+   3 | import { Fragment } from "react";
+>  4 | import {
+     | ^^^^^^^^
+>  5 |   Dialog,
+     | ^^^^^^^^^
+>  6 |   DialogPanel,
+     | ^^^^^^^^^
+>  7 |   DialogTitle,
+     | ^^^^^^^^^
+>  8 |   Transition,
+     | ^^^^^^^^^
+>  9 |   TransitionChild,
+     | ^^^^^^^^^
+> 10 | } from "@headlessui/react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import {
+  12 |   X,
+  13 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:07:00.455] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+   2 |
+   3 | import { Fragment } from "react";
+>  4 | import {
+     | ^^^^^^^^
+>  5 |   Dialog,
+     | ^^^^^^^^^
+>  6 |   DialogPanel,
+     | ^^^^^^^^^
+>  7 |   DialogTitle,
+     | ^^^^^^^^^
+>  8 |   Transition,
+     | ^^^^^^^^^
+>  9 |   TransitionChild,
+     | ^^^^^^^^^
+> 10 | } from "@headlessui/react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import {
+  12 |   X,
+  13 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:07:00.471] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+   2 |
+   3 | import { Fragment } from "react";
+>  4 | import {
+     | ^^^^^^^^
+>  5 |   Dialog,
+     | ^^^^^^^^^
+>  6 |   DialogPanel,
+     | ^^^^^^^^^
+>  7 |   DialogTitle,
+     | ^^^^^^^^^
+>  8 |   Transition,
+     | ^^^^^^^^^
+>  9 |   TransitionChild,
+     | ^^^^^^^^^
+> 10 | } from "@headlessui/react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import {
+  12 |   X,
+  13 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:07:00.490] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+   2 |
+   3 | import { Fragment } from "react";
+>  4 | import {
+     | ^^^^^^^^
+>  5 |   Dialog,
+     | ^^^^^^^^^
+>  6 |   DialogPanel,
+     | ^^^^^^^^^
+>  7 |   DialogTitle,
+     | ^^^^^^^^^
+>  8 |   Transition,
+     | ^^^^^^^^^
+>  9 |   TransitionChild,
+     | ^^^^^^^^^
+> 10 | } from "@headlessui/react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import {
+  12 |   X,
+  13 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:07:00.508] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+   2 |
+   3 | import { Fragment } from "react";
+>  4 | import {
+     | ^^^^^^^^
+>  5 |   Dialog,
+     | ^^^^^^^^^
+>  6 |   DialogPanel,
+     | ^^^^^^^^^
+>  7 |   DialogTitle,
+     | ^^^^^^^^^
+>  8 |   Transition,
+     | ^^^^^^^^^
+>  9 |   TransitionChild,
+     | ^^^^^^^^^
+> 10 | } from "@headlessui/react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import {
+  12 |   X,
+  13 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:07:00.525] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+   2 |
+   3 | import { Fragment } from "react";
+>  4 | import {
+     | ^^^^^^^^
+>  5 |   Dialog,
+     | ^^^^^^^^^
+>  6 |   DialogPanel,
+     | ^^^^^^^^^
+>  7 |   DialogTitle,
+     | ^^^^^^^^^
+>  8 |   Transition,
+     | ^^^^^^^^^
+>  9 |   TransitionChild,
+     | ^^^^^^^^^
+> 10 | } from "@headlessui/react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import {
+  12 |   X,
+  13 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:07:00.538] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+   2 |
+   3 | import { Fragment } from "react";
+>  4 | import {
+     | ^^^^^^^^
+>  5 |   Dialog,
+     | ^^^^^^^^^
+>  6 |   DialogPanel,
+     | ^^^^^^^^^
+>  7 |   DialogTitle,
+     | ^^^^^^^^^
+>  8 |   Transition,
+     | ^^^^^^^^^
+>  9 |   TransitionChild,
+     | ^^^^^^^^^
+> 10 | } from "@headlessui/react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import {
+  12 |   X,
+  13 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:07:00.556] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+   2 |
+   3 | import { Fragment } from "react";
+>  4 | import {
+     | ^^^^^^^^
+>  5 |   Dialog,
+     | ^^^^^^^^^
+>  6 |   DialogPanel,
+     | ^^^^^^^^^
+>  7 |   DialogTitle,
+     | ^^^^^^^^^
+>  8 |   Transition,
+     | ^^^^^^^^^
+>  9 |   TransitionChild,
+     | ^^^^^^^^^
+> 10 | } from "@headlessui/react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import {
+  12 |   X,
+  13 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:07:00.573] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+   2 |
+   3 | import { Fragment } from "react";
+>  4 | import {
+     | ^^^^^^^^
+>  5 |   Dialog,
+     | ^^^^^^^^^
+>  6 |   DialogPanel,
+     | ^^^^^^^^^
+>  7 |   DialogTitle,
+     | ^^^^^^^^^
+>  8 |   Transition,
+     | ^^^^^^^^^
+>  9 |   TransitionChild,
+     | ^^^^^^^^^
+> 10 | } from "@headlessui/react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import {
+  12 |   X,
+  13 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:07:00.591] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+   2 |
+   3 | import { Fragment } from "react";
+>  4 | import {
+     | ^^^^^^^^
+>  5 |   Dialog,
+     | ^^^^^^^^^
+>  6 |   DialogPanel,
+     | ^^^^^^^^^
+>  7 |   DialogTitle,
+     | ^^^^^^^^^
+>  8 |   Transition,
+     | ^^^^^^^^^
+>  9 |   TransitionChild,
+     | ^^^^^^^^^
+> 10 | } from "@headlessui/react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import {
+  12 |   X,
+  13 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:07:00.609] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+   2 |
+   3 | import { Fragment } from "react";
+>  4 | import {
+     | ^^^^^^^^
+>  5 |   Dialog,
+     | ^^^^^^^^^
+>  6 |   DialogPanel,
+     | ^^^^^^^^^
+>  7 |   DialogTitle,
+     | ^^^^^^^^^
+>  8 |   Transition,
+     | ^^^^^^^^^
+>  9 |   TransitionChild,
+     | ^^^^^^^^^
+> 10 | } from "@headlessui/react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import {
+  12 |   X,
+  13 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:07:00.616] Server  LOG     ✓ Compiled in 176ms
+[02:07:08.041] Browser ERROR   ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+   2 |
+   3 | import { Fragment } from "react";
+>  4 | import {
+     | ^^^^^^^^
+>  5 |   Dialog,
+     | ^^^^^^^^^
+>  6 |   DialogPanel,
+     | ^^^^^^^^^
+>  7 |   DialogTitle,
+     | ^^^^^^^^^
+>  8 |   Transition,
+     | ^^^^^^^^^
+>  9 |   TransitionChild,
+     | ^^^^^^^^^
+> 10 | } from "@headlessui/react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import {
+  12 |   X,
+  13 |   Package,
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[02:07:10.152] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+   2 |
+   3 | import { Fragment } from "react";
+>  4 | import {
+     | ^^^^^^^^
+>  5 |   Dialog,
+     | ^^^^^^^^^
+>  6 |   DialogPanel,
+     | ^^^^^^^^^
+>  7 |   DialogTitle,
+     | ^^^^^^^^^
+>  8 |   Transition,
+     | ^^^^^^^^^
+>  9 |   TransitionChild,
+     | ^^^^^^^^^
+> 10 | } from "@headlessui/react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import {
+  12 |   X,
+  13 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:07:10.352] Browser ERROR   ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+   2 |
+   3 | import { Fragment } from "react";
+>  4 | import {
+     | ^^^^^^^^
+>  5 |   Dialog,
+     | ^^^^^^^^^
+>  6 |   DialogPanel,
+     | ^^^^^^^^^
+>  7 |   DialogTitle,
+     | ^^^^^^^^^
+>  8 |   Transition,
+     | ^^^^^^^^^
+>  9 |   TransitionChild,
+     | ^^^^^^^^^
+> 10 | } from "@headlessui/react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import {
+  12 |   X,
+  13 |   Package,
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[02:07:13.247] Server  LOG     ○ Compiling /_error ...
+[02:07:15.939] Browser ERROR   ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+   2 |
+   3 | import { Fragment } from "react";
+>  4 | import {
+     | ^^^^^^^^
+>  5 |   Dialog,
+     | ^^^^^^^^^
+>  6 |   DialogPanel,
+     | ^^^^^^^^^
+>  7 |   DialogTitle,
+     | ^^^^^^^^^
+>  8 |   Transition,
+     | ^^^^^^^^^
+>  9 |   TransitionChild,
+     | ^^^^^^^^^
+> 10 | } from "@headlessui/react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import {
+  12 |   X,
+  13 |   Package,
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[02:07:17.264] Browser ERROR   ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+   2 |
+   3 | import { Fragment } from "react";
+>  4 | import {
+     | ^^^^^^^^
+>  5 |   Dialog,
+     | ^^^^^^^^^
+>  6 |   DialogPanel,
+     | ^^^^^^^^^
+>  7 |   DialogTitle,
+     | ^^^^^^^^^
+>  8 |   Transition,
+     | ^^^^^^^^^
+>  9 |   TransitionChild,
+     | ^^^^^^^^^
+> 10 | } from "@headlessui/react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import {
+  12 |   X,
+  13 |   Package,
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[02:07:25.732] Browser ERROR   uncaughtError: Error: ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+   2 |
+   3 | import { Fragment } from "react";
+>  4 | import {
+     | ^^^^^^^^
+>  5 |   Dialog,
+     | ^^^^^^^^^
+>  6 |   DialogPanel,
+     | ^^^^^^^^^
+>  7 |   DialogTitle,
+     | ^^^^^^^^^
+>  8 |   Transition,
+     | ^^^^^^^^^
+>  9 |   TransitionChild,
+     | ^^^^^^^^^
+> 10 | } from "@headlessui/react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import {
+  12 |   X,
+  13 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:07:26.195] Browser ERROR   ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+   2 |
+   3 | import { Fragment } from "react";
+>  4 | import {
+     | ^^^^^^^^
+>  5 |   Dialog,
+     | ^^^^^^^^^
+>  6 |   DialogPanel,
+     | ^^^^^^^^^
+>  7 |   DialogTitle,
+     | ^^^^^^^^^
+>  8 |   Transition,
+     | ^^^^^^^^^
+>  9 |   TransitionChild,
+     | ^^^^^^^^^
+> 10 | } from "@headlessui/react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import {
+  12 |   X,
+  13 |   Package,
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[02:07:26.387] Browser ERROR   ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+   2 |
+   3 | import { Fragment } from "react";
+>  4 | import {
+     | ^^^^^^^^
+>  5 |   Dialog,
+     | ^^^^^^^^^
+>  6 |   DialogPanel,
+     | ^^^^^^^^^
+>  7 |   DialogTitle,
+     | ^^^^^^^^^
+>  8 |   Transition,
+     | ^^^^^^^^^
+>  9 |   TransitionChild,
+     | ^^^^^^^^^
+> 10 | } from "@headlessui/react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import {
+  12 |   X,
+  13 |   Package,
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[02:07:38.113] Server  LOG     ✓ Finished filesystem cache database compaction in 11.0s
+[02:08:04.068] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+   2 |
+   3 | import { Fragment } from "react";
+>  4 | import {
+     | ^^^^^^^^
+>  5 |   Dialog,
+     | ^^^^^^^^^
+>  6 |   DialogPanel,
+     | ^^^^^^^^^
+>  7 |   DialogTitle,
+     | ^^^^^^^^^
+>  8 |   Transition,
+     | ^^^^^^^^^
+>  9 |   TransitionChild,
+     | ^^^^^^^^^
+> 10 | } from "@headlessui/react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import {
+  12 |   X,
+  13 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:08:04.265] Browser ERROR   ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+   2 |
+   3 | import { Fragment } from "react";
+>  4 | import {
+     | ^^^^^^^^
+>  5 |   Dialog,
+     | ^^^^^^^^^
+>  6 |   DialogPanel,
+     | ^^^^^^^^^
+>  7 |   DialogTitle,
+     | ^^^^^^^^^
+>  8 |   Transition,
+     | ^^^^^^^^^
+>  9 |   TransitionChild,
+     | ^^^^^^^^^
+> 10 | } from "@headlessui/react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import {
+  12 |   X,
+  13 |   Package,
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[02:08:04.953] Browser ERROR   uncaughtError: Error: ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+   2 |
+   3 | import { Fragment } from "react";
+>  4 | import {
+     | ^^^^^^^^
+>  5 |   Dialog,
+     | ^^^^^^^^^
+>  6 |   DialogPanel,
+     | ^^^^^^^^^
+>  7 |   DialogTitle,
+     | ^^^^^^^^^
+>  8 |   Transition,
+     | ^^^^^^^^^
+>  9 |   TransitionChild,
+     | ^^^^^^^^^
+> 10 | } from "@headlessui/react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import {
+  12 |   X,
+  13 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:08:05.186] Browser ERROR   ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+   2 |
+   3 | import { Fragment } from "react";
+>  4 | import {
+     | ^^^^^^^^
+>  5 |   Dialog,
+     | ^^^^^^^^^
+>  6 |   DialogPanel,
+     | ^^^^^^^^^
+>  7 |   DialogTitle,
+     | ^^^^^^^^^
+>  8 |   Transition,
+     | ^^^^^^^^^
+>  9 |   TransitionChild,
+     | ^^^^^^^^^
+> 10 | } from "@headlessui/react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import {
+  12 |   X,
+  13 |   Package,
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[02:08:05.582] Browser ERROR   ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+   2 |
+   3 | import { Fragment } from "react";
+>  4 | import {
+     | ^^^^^^^^
+>  5 |   Dialog,
+     | ^^^^^^^^^
+>  6 |   DialogPanel,
+     | ^^^^^^^^^
+>  7 |   DialogTitle,
+     | ^^^^^^^^^
+>  8 |   Transition,
+     | ^^^^^^^^^
+>  9 |   TransitionChild,
+     | ^^^^^^^^^
+> 10 | } from "@headlessui/react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import {
+  12 |   X,
+  13 |   Package,
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[02:12:07.430] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, Transition } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:12:07.475] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, Transition } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:12:07.519] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, Transition } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:12:07.547] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, Transition } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:12:07.570] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, Transition } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:12:07.584] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, Transition } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:12:08.582] Browser ERROR   ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, Transition } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[02:13:02.231] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, Transition } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:13:02.259] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, Transition } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:13:02.289] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, Transition } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:13:02.308] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, Transition } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:13:02.324] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, Transition } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:13:02.342] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, Transition } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:13:02.582] Browser ERROR   ./app/components/sales/ProductDetailModal.tsx:218:1
+Parsing ecmascript source code failed
+  216 |     </Transition>
+  217 |   );
+> 218 | }
+      | ^
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+[02:13:02.582] Browser ERROR   ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+  2 |
+  3 | import { Fragment } from "react";
+> 4 | import { Dialog, Transition } from "@headlessui/react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import {
+  6 |   X,
+  7 |   Package,
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[02:13:40.956] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+   2 |
+   3 | import { Fragment } from "react";
+>  4 | import {
+     | ^^^^^^^^
+>  5 |   Dialog,
+     | ^^^^^^^^^
+>  6 |   DialogPanel,
+     | ^^^^^^^^^
+>  7 |   DialogTitle,
+     | ^^^^^^^^^
+>  8 |   Transition,
+     | ^^^^^^^^^
+>  9 |   TransitionChild,
+     | ^^^^^^^^^
+> 10 | } from "@headlessui/react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import {
+  12 |   X,
+  13 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:13:40.978] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+   2 |
+   3 | import { Fragment } from "react";
+>  4 | import {
+     | ^^^^^^^^
+>  5 |   Dialog,
+     | ^^^^^^^^^
+>  6 |   DialogPanel,
+     | ^^^^^^^^^
+>  7 |   DialogTitle,
+     | ^^^^^^^^^
+>  8 |   Transition,
+     | ^^^^^^^^^
+>  9 |   TransitionChild,
+     | ^^^^^^^^^
+> 10 | } from "@headlessui/react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import {
+  12 |   X,
+  13 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:13:40.998] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+   2 |
+   3 | import { Fragment } from "react";
+>  4 | import {
+     | ^^^^^^^^
+>  5 |   Dialog,
+     | ^^^^^^^^^
+>  6 |   DialogPanel,
+     | ^^^^^^^^^
+>  7 |   DialogTitle,
+     | ^^^^^^^^^
+>  8 |   Transition,
+     | ^^^^^^^^^
+>  9 |   TransitionChild,
+     | ^^^^^^^^^
+> 10 | } from "@headlessui/react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import {
+  12 |   X,
+  13 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:13:41.020] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+   2 |
+   3 | import { Fragment } from "react";
+>  4 | import {
+     | ^^^^^^^^
+>  5 |   Dialog,
+     | ^^^^^^^^^
+>  6 |   DialogPanel,
+     | ^^^^^^^^^
+>  7 |   DialogTitle,
+     | ^^^^^^^^^
+>  8 |   Transition,
+     | ^^^^^^^^^
+>  9 |   TransitionChild,
+     | ^^^^^^^^^
+> 10 | } from "@headlessui/react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import {
+  12 |   X,
+  13 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:13:41.043] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+   2 |
+   3 | import { Fragment } from "react";
+>  4 | import {
+     | ^^^^^^^^
+>  5 |   Dialog,
+     | ^^^^^^^^^
+>  6 |   DialogPanel,
+     | ^^^^^^^^^
+>  7 |   DialogTitle,
+     | ^^^^^^^^^
+>  8 |   Transition,
+     | ^^^^^^^^^
+>  9 |   TransitionChild,
+     | ^^^^^^^^^
+> 10 | } from "@headlessui/react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import {
+  12 |   X,
+  13 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:13:41.062] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+   2 |
+   3 | import { Fragment } from "react";
+>  4 | import {
+     | ^^^^^^^^
+>  5 |   Dialog,
+     | ^^^^^^^^^
+>  6 |   DialogPanel,
+     | ^^^^^^^^^
+>  7 |   DialogTitle,
+     | ^^^^^^^^^
+>  8 |   Transition,
+     | ^^^^^^^^^
+>  9 |   TransitionChild,
+     | ^^^^^^^^^
+> 10 | } from "@headlessui/react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import {
+  12 |   X,
+  13 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:13:41.081] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+   2 |
+   3 | import { Fragment } from "react";
+>  4 | import {
+     | ^^^^^^^^
+>  5 |   Dialog,
+     | ^^^^^^^^^
+>  6 |   DialogPanel,
+     | ^^^^^^^^^
+>  7 |   DialogTitle,
+     | ^^^^^^^^^
+>  8 |   Transition,
+     | ^^^^^^^^^
+>  9 |   TransitionChild,
+     | ^^^^^^^^^
+> 10 | } from "@headlessui/react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import {
+  12 |   X,
+  13 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:13:41.099] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+   2 |
+   3 | import { Fragment } from "react";
+>  4 | import {
+     | ^^^^^^^^
+>  5 |   Dialog,
+     | ^^^^^^^^^
+>  6 |   DialogPanel,
+     | ^^^^^^^^^
+>  7 |   DialogTitle,
+     | ^^^^^^^^^
+>  8 |   Transition,
+     | ^^^^^^^^^
+>  9 |   TransitionChild,
+     | ^^^^^^^^^
+> 10 | } from "@headlessui/react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import {
+  12 |   X,
+  13 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:13:41.116] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+   2 |
+   3 | import { Fragment } from "react";
+>  4 | import {
+     | ^^^^^^^^
+>  5 |   Dialog,
+     | ^^^^^^^^^
+>  6 |   DialogPanel,
+     | ^^^^^^^^^
+>  7 |   DialogTitle,
+     | ^^^^^^^^^
+>  8 |   Transition,
+     | ^^^^^^^^^
+>  9 |   TransitionChild,
+     | ^^^^^^^^^
+> 10 | } from "@headlessui/react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import {
+  12 |   X,
+  13 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:13:41.145] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+   2 |
+   3 | import { Fragment } from "react";
+>  4 | import {
+     | ^^^^^^^^
+>  5 |   Dialog,
+     | ^^^^^^^^^
+>  6 |   DialogPanel,
+     | ^^^^^^^^^
+>  7 |   DialogTitle,
+     | ^^^^^^^^^
+>  8 |   Transition,
+     | ^^^^^^^^^
+>  9 |   TransitionChild,
+     | ^^^^^^^^^
+> 10 | } from "@headlessui/react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import {
+  12 |   X,
+  13 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:13:41.196] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+   2 |
+   3 | import { Fragment } from "react";
+>  4 | import {
+     | ^^^^^^^^
+>  5 |   Dialog,
+     | ^^^^^^^^^
+>  6 |   DialogPanel,
+     | ^^^^^^^^^
+>  7 |   DialogTitle,
+     | ^^^^^^^^^
+>  8 |   Transition,
+     | ^^^^^^^^^
+>  9 |   TransitionChild,
+     | ^^^^^^^^^
+> 10 | } from "@headlessui/react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import {
+  12 |   X,
+  13 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:13:41.223] Server  ERROR   ⨯ ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+   2 |
+   3 | import { Fragment } from "react";
+>  4 | import {
+     | ^^^^^^^^
+>  5 |   Dialog,
+     | ^^^^^^^^^
+>  6 |   DialogPanel,
+     | ^^^^^^^^^
+>  7 |   DialogTitle,
+     | ^^^^^^^^^
+>  8 |   Transition,
+     | ^^^^^^^^^
+>  9 |   TransitionChild,
+     | ^^^^^^^^^
+> 10 | } from "@headlessui/react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import {
+  12 |   X,
+  13 |   Package,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:13:41.571] Browser ERROR   ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+   2 |
+   3 | import { Fragment } from "react";
+>  4 | import {
+     | ^^^^^^^^
+>  5 |   Dialog,
+     | ^^^^^^^^^
+>  6 |   DialogPanel,
+     | ^^^^^^^^^
+>  7 |   DialogTitle,
+     | ^^^^^^^^^
+>  8 |   Transition,
+     | ^^^^^^^^^
+>  9 |   TransitionChild,
+     | ^^^^^^^^^
+> 10 | } from "@headlessui/react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import {
+  12 |   X,
+  13 |   Package,
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[02:16:02.396] Browser ERROR   ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+   2 |
+   3 | import { Fragment } from "react";
+>  4 | import {
+     | ^^^^^^^^
+>  5 |   Dialog,
+     | ^^^^^^^^^
+>  6 |   DialogPanel,
+     | ^^^^^^^^^
+>  7 |   DialogTitle,
+     | ^^^^^^^^^
+>  8 |   Transition,
+     | ^^^^^^^^^
+>  9 |   TransitionChild,
+     | ^^^^^^^^^
+> 10 | } from "@headlessui/react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import {
+  12 |   X,
+  13 |   Package,
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[02:16:02.734] Browser ERROR   ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+   2 |
+   3 | import { Fragment } from "react";
+>  4 | import {
+     | ^^^^^^^^
+>  5 |   Dialog,
+     | ^^^^^^^^^
+>  6 |   DialogPanel,
+     | ^^^^^^^^^
+>  7 |   DialogTitle,
+     | ^^^^^^^^^
+>  8 |   Transition,
+     | ^^^^^^^^^
+>  9 |   TransitionChild,
+     | ^^^^^^^^^
+> 10 | } from "@headlessui/react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import {
+  12 |   X,
+  13 |   Package,
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[02:16:02.734] Browser ERROR   ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+   2 |
+   3 | import { Fragment } from "react";
+>  4 | import {
+     | ^^^^^^^^
+>  5 |   Dialog,
+     | ^^^^^^^^^
+>  6 |   DialogPanel,
+     | ^^^^^^^^^
+>  7 |   DialogTitle,
+     | ^^^^^^^^^
+>  8 |   Transition,
+     | ^^^^^^^^^
+>  9 |   TransitionChild,
+     | ^^^^^^^^^
+> 10 | } from "@headlessui/react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import {
+  12 |   X,
+  13 |   Package,
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[02:16:02.736] Browser ERROR   ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+   2 |
+   3 | import { Fragment } from "react";
+>  4 | import {
+     | ^^^^^^^^
+>  5 |   Dialog,
+     | ^^^^^^^^^
+>  6 |   DialogPanel,
+     | ^^^^^^^^^
+>  7 |   DialogTitle,
+     | ^^^^^^^^^
+>  8 |   Transition,
+     | ^^^^^^^^^
+>  9 |   TransitionChild,
+     | ^^^^^^^^^
+> 10 | } from "@headlessui/react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import {
+  12 |   X,
+  13 |   Package,
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[02:16:02.736] Browser ERROR   ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+   2 |
+   3 | import { Fragment } from "react";
+>  4 | import {
+     | ^^^^^^^^
+>  5 |   Dialog,
+     | ^^^^^^^^^
+>  6 |   DialogPanel,
+     | ^^^^^^^^^
+>  7 |   DialogTitle,
+     | ^^^^^^^^^
+>  8 |   Transition,
+     | ^^^^^^^^^
+>  9 |   TransitionChild,
+     | ^^^^^^^^^
+> 10 | } from "@headlessui/react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import {
+  12 |   X,
+  13 |   Package,
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[02:16:02.736] Browser ERROR   ./app/components/sales/ProductDetailModal.tsx:4:1
+Module not found: Can't resolve '@headlessui/react'
+   2 |
+   3 | import { Fragment } from "react";
+>  4 | import {
+     | ^^^^^^^^
+>  5 |   Dialog,
+     | ^^^^^^^^^
+>  6 |   DialogPanel,
+     | ^^^^^^^^^
+>  7 |   DialogTitle,
+     | ^^^^^^^^^
+>  8 |   Transition,
+     | ^^^^^^^^^
+>  9 |   TransitionChild,
+     | ^^^^^^^^^
+> 10 | } from "@headlessui/react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import {
+  12 |   X,
+  13 |   Package,
+
+Import traces:
+  Client Component Browser:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/sales/ProductDetailModal.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/sales/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[02:16:03.614] Server  LOG     ✓ Compiled in 4.1s
+[02:29:09.591] Server  LOG     ✓ Compiled in 2.1s
+[02:29:10.234] Browser ERROR   uncaughtError: TypeError: Cannot read properties of undefined (reading 'filter')
+[02:29:29.251] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[02:29:31.135] Server  LOG     ✓ Compiled in 424ms
+[02:31:17.484] Browser ERROR   Prediction failed: {"code":"ERR_BAD_RESPONSE","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"baseURL":"http://localhost:8000/api","data":"{\"jumlah_penjualan\":100,\"harga\":57001,\"diskon\":10}","env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTc3MzQ3MTQ1NX0.vphPCEWW-V_iuw3Lb0AUnK6hOXrMh8Qgs-epQfou6mM","Content-Type":"application/json"},"maxBodyLength":-1,"maxContentLength":-1,"method":"post","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"/predict","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Request failed with status code 500","name":"AxiosError","stack":"AxiosError: Request failed with status code 500\n    at settle (http://localhost:3000/_next/static/chunks/node_modules_8260c562._.js:3558:16)\n    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_8260c562._.js:4074:174)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_8260c562._.js:4880:49)\n    at async predict (http://localhost:3000/_next/static/chunks/app_5e5c1b02._.js:740:30)\n    at async handlePredict (http://localhost:3000/_next/static/chunks/app_5d5495bc._.js:255:13)","status":500}
+[02:31:29.092] Browser ERROR   Prediction failed: {"code":"ERR_BAD_RESPONSE","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"baseURL":"http://localhost:8000/api","data":"{\"jumlah_penjualan\":100,\"harga\":57001,\"diskon\":10}","env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTc3MzQ3MTQ1NX0.vphPCEWW-V_iuw3Lb0AUnK6hOXrMh8Qgs-epQfou6mM","Content-Type":"application/json"},"maxBodyLength":-1,"maxContentLength":-1,"method":"post","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"/predict","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Request failed with status code 500","name":"AxiosError","stack":"AxiosError: Request failed with status code 500\n    at settle (http://localhost:3000/_next/static/chunks/node_modules_8260c562._.js:3558:16)\n    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_8260c562._.js:4074:174)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_8260c562._.js:4880:49)\n    at async predict (http://localhost:3000/_next/static/chunks/app_5e5c1b02._.js:740:30)\n    at async handlePredict (http://localhost:3000/_next/static/chunks/app_5d5495bc._.js:255:13)","status":500}
+[02:32:50.108] Server  LOG     ✓ Compiled in 343ms
+[02:37:27.005] Browser ERROR   Prediction failed: {"code":"ERR_BAD_RESPONSE","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"baseURL":"http://localhost:8000/api","data":"{\"jumlah_penjualan\":100,\"harga\":53001,\"diskon\":10}","env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTc3MzQ3MTQ1NX0.vphPCEWW-V_iuw3Lb0AUnK6hOXrMh8Qgs-epQfou6mM","Content-Type":"application/json"},"maxBodyLength":-1,"maxContentLength":-1,"method":"post","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"/predict","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Request failed with status code 500","name":"AxiosError","stack":"AxiosError: Request failed with status code 500\n    at settle (http://localhost:3000/_next/static/chunks/node_modules_d6f5a40a._.js:4030:16)\n    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_d6f5a40a._.js:4546:174)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_d6f5a40a._.js:5352:49)\n    at async predict (http://localhost:3000/_next/static/chunks/app_5d5495bc._.js:106:30)\n    at async handlePredict (http://localhost:3000/_next/static/chunks/app_5d5495bc._.js:255:13)","status":500}
+[03:09:21.241] Browser ERROR   Login error: {}

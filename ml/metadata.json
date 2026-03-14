@@ -1,0 +1,32 @@
+{
+  "model_type": "RandomForestClassifier",
+  "features": [
+    "jumlah_penjualan",
+    "harga",
+    "diskon"
+  ],
+  "classes": [
+    "Laris",
+    "Tidak"
+  ],
+  "accuracy": 1.0,
+  "training_date": "2026-03-14 14:05:15",
+  "training_samples": 4000,
+  "test_samples": 1000,
+  "n_estimators": 100,
+  "max_depth": 10,
+  "feature_importance": [
+    {
+      "feature": "jumlah_penjualan",
+      "importance": 0.9873114096416384
+    },
+    {
+      "feature": "harga",
+      "importance": 0.010501894430385919
+    },
+    {
+      "feature": "diskon",
+      "importance": 0.002186695927975639
+    }
+  ]
+}
