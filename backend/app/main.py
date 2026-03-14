@@ -3,7 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from fastapi.exceptions import RequestValidationError
 from jose import JWTError
-from tomlkit import datetime
+from datetime import datetime
 
 from app.core.config import settings
 from app.api.endpoints import login, sales, predict
@@ -73,12 +73,14 @@ async def root():
 
 @app.get("/health")
 async def health_check():
-    """Health check endpoint"""
+    "Health check endpoint"
     return {
         "status": "healthy",
-        "data_service": "loaded" if not data_service.df.empty else "empty",
-        "ml_service": "loaded" if ml_service.is_model_loaded else "not_loaded",
-        "timestamp": datetime.now().isoformat()
+        "timestamp": datetime.now().isoformat(),
+        "services": {
+            "data_service": "loaded" if not data_service.df.empty else "empty",
+            "ml_service": "loaded" if ml_service.is_model_loaded else "not_loaded"
+        }
     }
 
 @app.on_event("startup")

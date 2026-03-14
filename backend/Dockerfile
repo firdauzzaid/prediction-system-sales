@@ -14,7 +14,11 @@ COPY ../ml/ /app/ml/
 
 # Set environment variables
 ENV PYTHONPATH=/app
-ENV PORT=${PORT:-8000}
+ENV PORT=${PORT:-8000}`
+ENV CSV_FILE_PATH=/app/data/sales_data.csv
+ENV MODEL_FILE_PATH=/app/ml/model.pkl
+
+EXPOSE 8000
 
 # Jalankan langsung (tanpa cd)
 CMD uvicorn app.main:app --host 0.0.0.0 --port $PORT
