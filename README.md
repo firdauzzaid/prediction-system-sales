@@ -42,6 +42,15 @@ python ml/train_model.py
 python run.py
 ```
 
+## Konfigurasi Environment
+
+#### Buat file `.env` di **root folder**
+
+```bash
+# Copy dari .env.example
+cp .env.example .env
+```
+
 ## System Design
 
 ### Arsitektur Diagram
