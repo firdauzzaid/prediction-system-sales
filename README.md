@@ -46,9 +46,7 @@ python run.py
 
 ### Arsitektur Diagram
 
-```
 ![diagram](./screenshots/diagram.png)
-```
 
 ### Alur Data
 
