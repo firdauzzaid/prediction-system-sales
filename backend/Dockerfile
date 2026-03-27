@@ -16,6 +16,9 @@ ENV PORT=${PORT:-8000}
 ENV CSV_FILE_PATH=/app/data/sales_data.csv
 ENV MODEL_FILE_PATH=/app/ml/model.pkl
 
+# Set working directory ke backend dimana run.py berada
+WORKDIR /backend
+
 # Expose port
 EXPOSE 8000
 
