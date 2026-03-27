@@ -22,5 +22,4 @@ WORKDIR /backend
 # Expose port
 EXPOSE 8000
 
-# Gunakan JSON array format untuk CMD dan gunakan run.py
 CMD ["python", "run.py"]
