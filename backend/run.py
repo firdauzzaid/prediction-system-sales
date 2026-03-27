@@ -53,6 +53,6 @@ if __name__ == "__main__":
         "app.main:app",
         host="0.0.0.0",
         port=8000,
-        reload=True,
+        reload=False,  # Set to True if you want auto-reload on code changes
         log_level="info"
     )

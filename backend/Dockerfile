@@ -16,4 +16,7 @@ ENV PORT=${PORT:-8000}
 ENV CSV_FILE_PATH=/app/data/sales_data.csv
 ENV MODEL_FILE_PATH=/app/ml/model.pkl
 
-CMD uvicorn backend.app.main:app --host 0.0.0.0 --port $PORT
+# Expose port
+EXPOSE ${PORT:-8000}
+
+CMD sh -c "uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-8000}"
