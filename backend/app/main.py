@@ -45,7 +45,11 @@ app = FastAPI(
 # Configure CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "https://prediction-system-sales-production.up.railway.app", "https://prediction-system-sales.vercel.app"],  # React/Next.js default port
+    allow_origins=[
+        "http://localhost:3000", 
+        "https://prediction-system-sales-production.up.railway.app", 
+        "https://prediction-system-sales.vercel.app"
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
