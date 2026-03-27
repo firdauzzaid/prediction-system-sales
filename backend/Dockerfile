@@ -11,9 +11,14 @@ COPY backend/ ./backend/
 COPY data/ ./data/
 COPY ml/ ./ml/
 
+# Set PYTHONPATH to include the app directory
 ENV PYTHONPATH=/app
 ENV PORT=${PORT:-8000}
 ENV CSV_FILE_PATH=/app/data/sales_data.csv
 ENV MODEL_FILE_PATH=/app/ml/model.pkl
 
-CMD uvicorn backend.app.main:app --host 0.0.0.0 --port $PORT
+# Set working directory to backend
+WORKDIR /app/backend
+
+# Run uvicorn (now app.main is directly accessible)
+CMD uvicorn app.main:app --host 0.0.0.0 --port ${PORT}
