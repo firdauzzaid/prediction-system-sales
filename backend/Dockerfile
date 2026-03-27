@@ -3,7 +3,7 @@ FROM python:3.11-slim
 WORKDIR /app
 
 # Copy requirements dari folder saat ini (backend)
-COPY requirements.txt .
+COPY backend/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy seluruh isi folder backend ke /app
