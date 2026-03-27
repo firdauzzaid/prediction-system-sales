@@ -2,12 +2,12 @@ FROM python:3.11-slim
 
 WORKDIR /app
 
-# Copy requirements dari folder saat ini (backend)
+# Copy requirements dari folder backend
 COPY backend/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy seluruh isi folder backend ke /app
-COPY . .
+# Copy seluruh isi folder backend ke /app/backend
+COPY backend/ ./backend/
 
 # Copy data dan ml dari parent directory
 COPY ../data ./data
@@ -19,15 +19,20 @@ ENV PORT=${PORT:-8000}
 ENV CSV_FILE_PATH=/app/data/sales_data.csv
 ENV MODEL_FILE_PATH=/app/ml/model.pkl
 
-# Debug: Lihat struktur file
+# Debug: Lihat struktur
 RUN echo "=== Directory Structure ===" && \
     ls -la /app/ && \
+    echo "=== Backend Directory ===" && \
+    ls -la /app/backend/ && \
     echo "=== App Directory ===" && \
-    ls -la /app/app/ && \
+    ls -la /app/backend/app/ && \
     echo "=== Data Directory ===" && \
     ls -la /app/data/ && \
     echo "=== ML Directory ===" && \
     ls -la /app/ml/
+
+# Set working directory ke backend
+WORKDIR /app/backend
 
 # Expose port
 EXPOSE 8000
