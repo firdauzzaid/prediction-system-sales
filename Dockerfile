@@ -17,8 +17,11 @@ ENV PORT=${PORT:-8000}
 ENV CSV_FILE_PATH=/app/data/sales_data.csv
 ENV MODEL_FILE_PATH=/app/ml/model.pkl
 
+# Set working directory to backend
+WORKDIR /app/backend
+
 # Expose port
 EXPOSE ${PORT}
 
-# Run the application
-CMD cd /app/backend && uvicorn app.main:app --host 0.0.0.0 --port ${PORT}
+# Run the application - langsung dari WORKDIR yang sudah benar
+CMD uvicorn app.main:app --host 0.0.0.0 --port ${PORT}
