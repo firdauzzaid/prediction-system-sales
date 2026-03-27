@@ -3,13 +3,13 @@ FROM python:3.11-slim
 WORKDIR /app
 
 # Copy requirements (dari folder saat ini yaitu backend)
-COPY requirements.txt .
+COPY backend/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy seluruh folder backend ke /app/backend
 COPY . ./backend/
 
-# Copy data dan ml dari parent directory
+# Copy data dan ml dari parent directory (karena Dockerfile di backend)
 COPY ../data/ ./data/
 COPY ../ml/ ./ml/
 
