@@ -19,6 +19,12 @@ ENV PORT=${PORT:-8000}
 ENV CSV_FILE_PATH=/app/data/sales_data.csv
 ENV MODEL_FILE_PATH=/app/ml/model.pkl
 
+# Verifikasi versi library setelah install
+RUN echo "=== Installed Library Versions ===" && \
+    python -c "import numpy; print(f'numpy: {numpy.__version__}')" && \
+    python -c "import sklearn; print(f'scikit-learn: {sklearn.__version__}')" && \
+    python -c "import joblib; print(f'joblib: {joblib.__version__}')"
+
 # Debug: Verify structure
 RUN echo "=== Directory Structure Verification ===" && \
     echo "Root directory contents:" && \
