@@ -17,6 +17,7 @@ ENV CSV_FILE_PATH=/app/data/sales_data.csv
 ENV MODEL_FILE_PATH=/app/ml/model.pkl
 
 # Expose port
-EXPOSE ${PORT:-8000}
+EXPOSE 8000
 
-CMD sh -c "uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-8000}"
+# Gunakan JSON array format untuk CMD dan gunakan run.py
+CMD ["python", "run.py"]
