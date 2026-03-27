@@ -1,8 +1,6 @@
 import os
 
 from pydantic_settings import BaseSettings
-from typing import Optional
-from pathlib import Path
 
 class Settings(BaseSettings):
     PROJECT_NAME: str = "Mini AI Sales Prediction API"
