@@ -19,18 +19,6 @@ ENV PORT=${PORT:-8000}
 ENV CSV_FILE_PATH=/app/data/sales_data.csv
 ENV MODEL_FILE_PATH=/app/ml/model.pkl
 
-# Debug: Lihat struktur
-RUN echo "=== Directory Structure ===" && \
-    ls -la /app/ && \
-    echo "=== Backend Directory ===" && \
-    ls -la /app/backend/ && \
-    echo "=== App Directory ===" && \
-    ls -la /app/backend/app/ && \
-    echo "=== Data Directory ===" && \
-    ls -la /app/data/ && \
-    echo "=== ML Directory ===" && \
-    ls -la /app/ml/
-
 # Set working directory ke backend
 WORKDIR /app/backend
 
